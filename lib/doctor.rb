@@ -21,7 +21,7 @@ class Doctor
   end
   
   def patients
-    self.appointments.select {|date| date.patient}
+    self.appointments.collect {|date| date.patient}
   end
   
   def self.all
